@@ -2,6 +2,10 @@
 
 Diseño abierto de un control estilo leverless para juegos de pelea. Este proyecto permite a cualquiera fabricar su propio “fighting stick” sin palanca, usando piezas impresas en 3D y una placa frontal cortada en láser.
 
+El objetivo de este proyecto es usar cosas que puedas conseguir facilmente, en caso de tener diferentes insertos o botones no dudes en modificar los archivos.
+
+![Leverless Fighting Pad Armado](LeverlessArmado.jpg)
+
 ### Características
 - **Formato leverless**: entradas de dirección con botones (estilo WASD) para precisión.
 - **Archivos listos para fabricar**: modelos `.stl` para impresión 3D y una placa frontal `.svg` para corte láser.
@@ -53,13 +57,21 @@ Ajusta holguras para los botones: los de 30 mm suelen requerir tolerancia de ~0.
 - Escala 1:1. Comprueba que tu software no aplique cambios de DPI al importar el SVG.
 
 ### Ensamblaje básico
-1. Imprime las piezas `ASDW.stl`, `ASDW NUT.stl` y `SidePanelFS-PCB.stl` (y el resto de la carcasa si aplica).
+1. Imprime las piezas `ASDW.stl`, `ASDW NUT.stl` y `SidePanelFS-PCB.stl`.
 2. Corta la placa frontal con `LaserPlate.svg` en el material elegido.
 3. Inserta los botones en la placa frontal y fija con las tuercas impresas respectivas para mantenerlo fijo en este punto decide si quieres que las flechas esten rectas o en angulo.
-6. Flashea y configura el firmware (ver sección siguiente).
-4. Monta el microcontrolador en su soporte temporalmente y realiza el cableado de cada botón a la controladora.
-5. Usar un poco de silicona caliente para que el microcontrolador quede fijo en su soporte.
-7. Prueba cada entrada en el sistema operativo/juego y ajusta si es necesario.
+4. Inserta los standoffs hexagonales en la pieza SidePanel, puede requerir un poco de fuerza, si usas diferentes insertos es recomendable usar unos que se puedan insertar con calor y usar el cautin para que entren en su lugar.
+5. Atornilla la placa delantera para que al posicionar el microcontrolador puedas medir los cables al tamaño que sea necesario.
+5. Flashea y configura el firmware (ver sección siguiente). Una vez ensamblado sera mas complicado presionar el boton de boot para flashear el firmware.
+6. Monta el microcontrolador en su soporte temporalmente y realiza el cableado de cada botón a la controladora.
+
+   ![Pinout Waveshare RP2040-Zero](PinoutWaveshare.png)
+
+   ![Foto del pinout leverless](leverlesspinout.jpg)
+   
+7. Usar un poco de silicona caliente para que el microcontrolador quede fijo en su soporte.
+8. Prueba cada entrada para validar que se soldo de manera correcta yo utilice el siguiente [Gamepad Tester](https://hardwaretester.com/gamepad).
+9. Una vez comprobado que todo esta funcionando atornilla la placa trasera y tu control esta terminado!
 
 ### Firmware y compatibilidad
 - **GP2040-CE (RP2040)**: En el apartado de Downloads buscar la placa Waveshare RP2040-Zero para descargar el firmware mas reciente.
