@@ -67,7 +67,7 @@ Ajusta holguras para los botones: los de 30 mm suelen requerir tolerancia de ~0.
 
    ![Pinout Waveshare RP2040-Zero](PinoutWaveshare.png)
 
-   ![Foto del pinout leverless](leverlesspinout.jpg)
+   ![Foto del pinout leverless](LeverlessPinout.jpg)
    
 7. Usar un poco de silicona caliente para que el microcontrolador quede fijo en su soporte.
 8. Prueba cada entrada para validar que se soldo de manera correcta yo utilice el siguiente [Gamepad Tester](https://hardwaretester.com/gamepad).
